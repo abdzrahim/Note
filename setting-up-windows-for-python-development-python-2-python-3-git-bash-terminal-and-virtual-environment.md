@@ -216,6 +216,33 @@ Similarly, I can run `mkvirtualenv --python='C:\Python27\python.exe' python27env
 
 This concludes our tutorial. Your Windows system should be an inch closer to being the platform on which great python apps are developed.
 
+
+### Syntax
+1. make environment
+
+            mkvirtualenv -p '[path_to_your_python]' [name_of_environment]
+            mkvirtualenv -p 'C:\Python35\python.exe' python36env
+            
+2. folder of the environment
+    
+                (python27env)
+                jose.pumar@host MINGW64 ~
+                $ which python
+                /C/Users/jose.pumar/.virtualenvs/python27env/Scripts/python
+         
+3. activate virtualenv
+            
+                workon python36env
+                
+4. deactivate virtualenv
+
+                deactivate
+                
+5. remove virtualenv
+                
+               rmvirtualenv python35env -r
+
+
 ### References
 
 * * *
