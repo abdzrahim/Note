@@ -1,4 +1,5 @@
 Video Refering Refering : https://www.youtube.com/watch?v=Bof94c-TtqM
+
 Google Cloud Setup Ubuntu, Nginx, MySQL , PHP5 & PHPMYADMIN 
 
 Google Instance Setup:
