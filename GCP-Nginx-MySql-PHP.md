@@ -13,24 +13,24 @@ Google Instance Setup:
 	- Firewall [enable HTTP & HTTPS traffic]
 
 SSH Command: 
-sudo apt-get update
-sudo apt-get install nginx
-sudo service nginx restart
-sudo apt-get install mysql-server php5-mysql
-sudo mysql_install_db
-sudo /usr/bin/mysql_secure_installation
+- sudo apt-get update
+- sudo apt-get install nginx
+- sudo service nginx restart
+- sudo apt-get install mysql-server php5-mysql
+- sudo mysql_install_db
+- sudo /usr/bin/mysql_secure_installation
 
-sudo service mysql restart
-sudo apt-get install php5-fpm
-sudo nano /etc/php5/fpm/php.ini
+- sudo service mysql restart
+- sudo apt-get install php5-fpm
+- sudo nano /etc/php5/fpm/php.ini
 	- {search on nano command F6 or Ctrl+W}
 	- search [cgi.fix_pathinfo=1]
 	- uncomment
 	- change [cgi.fix_pathinfo=0]
-sudo nano /etc/php5/fpm/pool.d/www.conf
+- sudo nano /etc/php5/fpm/pool.d/www.conf
 	- check on [listen = /var/run/php5-fpm.sock]
-sudo service php5-fpm restart
-sudo nano /etc/nginx/sites-available/default
+- sudo service php5-fpm restart
+- sudo nano /etc/nginx/sites-available/default
 	- add to [server{index "index.php" index.html index.fm;}] 
 	- uncomment 
 		[location ~ \.php$ {
@@ -38,17 +38,17 @@ sudo nano /etc/nginx/sites-available/default
 			fastcgi_index index.php;
 			include fastcgi_params;
 		}]
-cd /usr/share/nginx/html
-ls
-sudo nano index.php
+- cd /usr/share/nginx/html
+- ls
+- sudo nano index.php
 	<?php
 	phpinfo();
 	?>
-sudo apt-get install phpmyadmin
+- sudo apt-get install phpmyadmin
 	- setting password of the database administrative user
 	- setting mysql application password for phpadmin
 	
-sudo ln -s /usr/share/phpmyadmin /usr/share/nginx/html
-cd /usr/share/nginx/html
-sudo php5enmod mcrypt
-sudo service php5-fpm restart
+- sudo ln -s /usr/share/phpmyadmin /usr/share/nginx/html
+- cd /usr/share/nginx/html
+- sudo php5enmod mcrypt
+- sudo service php5-fpm restart
